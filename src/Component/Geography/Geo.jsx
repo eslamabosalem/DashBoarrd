@@ -1,6 +1,8 @@
 import React from 'react'
-import Header from '../Header.jsx/Header'
+
 import { Box } from '@mui/material'
+
+import Header from '../Header/Header';
 import Geography from './Geography';
 
 
