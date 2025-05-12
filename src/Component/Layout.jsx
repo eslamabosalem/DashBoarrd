@@ -1,6 +1,6 @@
 import React from 'react';
 import Topbar from './Topbar';
-import SideBar from './SideBar';
+import SideBar from '../Component/Sidebar';
 import { Outlet } from 'react-router-dom';
 import { Box, CssBaseline } from '@mui/material';
 import { styled, useTheme } from '@mui/material/styles';
