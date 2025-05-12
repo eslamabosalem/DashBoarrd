@@ -19,6 +19,7 @@ import LineChart from './Component/LineChart/LineChart';
 
 import PieCharts from './Component/PieChart/PieCharts';
 import Geography from './Component/Geography/Geography';
+import Geo from './Component/Geography/Geo';
 
 
 
@@ -42,7 +43,8 @@ function App() {
         { path: "chart", element: <Chart/> },
         { path: "pieChartt", element: <PieChart/> },
         { path: "lineChart", element: <LineChart/> },
-        { path: "geographt", element: <Geography/> },
+        { path: "geographtt", element: <Geography/> },
+        { path: "geographt", element: <Geo/> },
         
         { path: "pieChart", element: <PieCharts/> },
       ],
