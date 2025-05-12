@@ -2,7 +2,7 @@ import React from "react";
 import { DataGrid, GridToolbar } from "@mui/x-data-grid";
 import { Box } from "@mui/material";
 import { columns, rows } from "./data";
-import Header from "../../component/Header.jsx/Header";
+import Header from "../Header/Header";
 
 const Contacts = () => {
   return (
@@ -18,7 +18,7 @@ const Contacts = () => {
           columns={columns}
           components={{ Toolbar: GridToolbar }} // عشان يظهر الـ GridToolbar
           localeText={{
-            toolbarQuickFilterPlaceholder: 'Search contacts', // تعديل نص البحث
+            toolbarQuickFilterPlaceholder: "Search contacts", // تعديل نص البحث
           }}
           showToolbar
         />

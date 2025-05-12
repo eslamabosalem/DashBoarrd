@@ -15,9 +15,10 @@ import Faq from './Component/Faq/Faq';
 import Chart from './Component/Chart/Chart';
 import PieChart from './Component/PieChart/PieChart';
 import LineChart from './Component/LineChart/LineChart';
-import Geography from './Component/geography/Geography';
+
 
 import PieCharts from './Component/PieChart/PieCharts';
+import Geography from './Component/Geography/Geography';
 
 
 
@@ -42,6 +43,7 @@ function App() {
         { path: "pieChartt", element: <PieChart/> },
         { path: "lineChart", element: <LineChart/> },
         { path: "geographt", element: <Geography/> },
+        
         { path: "pieChart", element: <PieCharts/> },
       ],
     }

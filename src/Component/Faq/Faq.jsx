@@ -5,9 +5,7 @@ import AccordionSummary from "@mui/material/AccordionSummary";
 import Typography from "@mui/material/Typography";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import { Box, Stack } from "@mui/material";
-import Header from "../Header.jsx/Header";
-
-
+import Header from "../Header/Header";
 
 const FAQ = () => {
   const [expanded, setExpanded] = React.useState(false);
@@ -16,17 +14,10 @@ const FAQ = () => {
     setExpanded(isExpanded ? panel : false);
   };
   return (
-<Box>
-  
+    <Box>
       <Header title="FAQ" subTitle="Frequently Asked Questions Page" />
-  
+
       <Stack direction={"column"} gap={2}>
-  
-      
-      
-      
-      
-      
         <Accordion defaultExpanded onChange={handleChange("panel1")}>
           <AccordionSummary
             expandIcon={<ExpandMoreIcon />}
@@ -42,13 +33,12 @@ const FAQ = () => {
           </AccordionSummary>
           <AccordionDetails>
             <Typography>
-              Nulla facilisi. Phasellus sollicitudin nulla et quam mattis feugiat.
-              Aliquam eget maximus est, id dignissim quam.
+              Nulla facilisi. Phasellus sollicitudin nulla et quam mattis
+              feugiat. Aliquam eget maximus est, id dignissim quam.
             </Typography>
           </AccordionDetails>
         </Accordion>
-  
-      
+
         <Accordion
           // @ts-ignore
           expanded={expanded === "panel3"}
@@ -94,9 +84,7 @@ const FAQ = () => {
             </Typography>
           </AccordionDetails>
         </Accordion>
-  
 
-  
         <Accordion
           // @ts-ignore
           expanded={expanded === "panel2"}
@@ -120,9 +108,8 @@ const FAQ = () => {
             </Typography>
           </AccordionDetails>
         </Accordion>
-      
       </Stack>
-</Box>
+    </Box>
   );
 };
 

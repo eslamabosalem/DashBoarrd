@@ -2,8 +2,7 @@ import { Box, useTheme } from "@mui/material";
 import React from "react";
 import { ResponsiveLine } from "@nivo/line";
 import Line from "./Line";
-import Header from "../Header.jsx/Header";
-
+import Header from "../Header/Header";
 
 const LineChart = () => {
   const theme = useTheme();

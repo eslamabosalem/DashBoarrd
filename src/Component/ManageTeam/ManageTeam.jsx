@@ -1,13 +1,18 @@
-import * as React from 'react';
-import { DataGrid } from '@mui/x-data-grid';
-import { rows } from '../data';
-import { useTheme } from '@mui/material/styles'; 
+import * as React from "react";
+import { DataGrid } from "@mui/x-data-grid";
+import { rows } from "../data";
+import { useTheme } from "@mui/material/styles";
 import { Box, Typography } from "@mui/material";
-import { AdminPanelSettingsOutlined, LockOpenOutlined, Palette, SecurityOutlined } from '@mui/icons-material'; 
-import Header from '../Header.jsx/Header';
+import {
+  AdminPanelSettingsOutlined,
+  LockOpenOutlined,
+  Palette,
+  SecurityOutlined,
+} from "@mui/icons-material";
+import Header from "../Header/Header";
 
 export default function ManageTeam() {
-  const theme = useTheme(); 
+  const theme = useTheme();
 
   const columns = [
     {
@@ -39,7 +44,6 @@ export default function ManageTeam() {
       headerAlign: "center",
     },
 
-
     {
       field: "access",
       headerName: "Access",
@@ -48,17 +52,17 @@ export default function ManageTeam() {
       renderCell: ({ row: { access } }) => {
         let backgroundColor;
         let color = "#fff";
-    
+
         if (access === "Admain") {
-          backgroundColor = "#ff4d4d"; 
+          backgroundColor = "#ff4d4d";
         } else if (access === "Manger") {
-          backgroundColor = "#ffc107"; 
+          backgroundColor = "#ffc107";
           color = "#212529";
         } else {
-          backgroundColor = "#5bc0de"; 
+          backgroundColor = "#5bc0de";
           color = "#212529";
         }
-    
+
         return (
           <Box
             sx={{
@@ -70,24 +74,27 @@ export default function ManageTeam() {
               color: color,
               borderRadius: "5px",
               padding: "8px 12px",
-              width: "100px", 
+              width: "100px",
               margin: "auto",
-              
+
               transform: "translateY(20%)",
             }}
           >
             {access === "Admain" && (
-              <AdminPanelSettingsOutlined sx={{ color: color }} fontSize="small" />
+              <AdminPanelSettingsOutlined
+                sx={{ color: color }}
+                fontSize="small"
+              />
             )}
-    
+
             {access === "Manger" && (
               <SecurityOutlined sx={{ color: color }} fontSize="small" />
             )}
-    
+
             {access === "User" && (
               <LockOpenOutlined sx={{ color: color }} fontSize="small" />
             )}
-    
+
             <Typography sx={{ fontSize: "13px", color: color }}>
               {access}
             </Typography>
@@ -95,17 +102,13 @@ export default function ManageTeam() {
         );
       },
     },
-    
   ];
 
-
-return (
-    
-    
+  return (
     <Box>
       <Header title={"TEAM"} subTitle={"Managing the Team Members"} />
 
-      <Box sx={{ height: "70vh", mx: "auto"  }}>
+      <Box sx={{ height: "70vh", mx: "auto" }}>
         <DataGrid
           rows={rows}
           // @ts-ignore
